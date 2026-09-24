@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "SourceSnap Capture",
+  "version": "1.0.0",
+  "description": "Save the page you're on into your SourceSnap archive with one click.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

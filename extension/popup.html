@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SourceSnap</title>
+    <style>
+      body {
+        width: 320px;
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #03060a;
+        color: #cbd5e1;
+        margin: 0;
+        padding: 16px;
+      }
+      h1 {
+        font-size: 15px;
+        color: #fff;
+        margin: 0 0 12px 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      label {
+        display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #64748b;
+        margin: 10px 0 4px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        background: rgba(5, 8, 14, 0.9);
+        border: 1px solid rgba(0, 229, 255, 0.2);
+        border-radius: 6px;
+        padding: 8px;
+        color: #fff;
+        font-size: 12px;
+        outline: none;
+      }
+      input:focus,
+      textarea:focus {
+        border-color: #00e5ff;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 50px;
+      }
+      button {
+        width: 100%;
+        margin-top: 14px;
+        padding: 9px;
+        border: none;
+        border-radius: 6px;
+        background: #00e5ff;
+        color: #03060a;
+        font-weight: 700;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: default;
+      }
+      #status {
+        margin-top: 10px;
+        font-size: 11px;
+        text-align: center;
+        min-height: 14px;
+      }
+      .ok {
+        color: #34d399;
+      }
+      .err {
+        color: #f87171;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SourceSnap 📸</h1>
+
+    <label for="url">Page URL</label>
+    <input id="url" type="text" readonly />
+
+    <label for="source_title">Page title (auto)</label>
+    <input id="source_title" type="text" />
+
+    <label for="topic">Topic tag</label>
+    <input id="topic" type="text" placeholder="Short category, e.g. LeetCode" />
+
+    <label for="notes">Notes (optional)</label>
+    <textarea id="notes" placeholder="Any notes to remember..."></textarea>
+
+    <button id="saveBtn">Save to SourceSnap</button>
+    <p id="status"></p>
+
+    <script src="config.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
